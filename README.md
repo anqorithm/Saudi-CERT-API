@@ -1,4 +1,4 @@
-# Saudi Cert Lambda Function 🚀
+# Saudi Cert Lambda (Parser & Public API) 🚀
 
 ![Saudi CERT](./assets/saudiCERTBackground.png)
 

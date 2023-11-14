@@ -1,5 +1,7 @@
 # Saudi Cert Lambda Function 🚀
 
+![Saudi CERT](./assets/saudiCERTBackground.png)
+
 ## Status
 
 ![AWS Lambda Logo](https://img.shields.io/badge/deployed-aws-lambda)
@@ -9,6 +11,9 @@
 ![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python)
 
 ## Overview 📖
+
+
+![Saudi CERT Logo](https://cert.gov.sa/static/img/CERT-logo-white.0bfc797b46cc.svg)
 
 This repository has a tool and an API for Saudi CERT alerts. Its goal is to help improve online safety knowledge in Saudi Arabia. Using AWS Lambda, this project takes Saudi CERT's alerts, organizes them, and makes them easy to get through a public API.
 

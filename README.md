@@ -9,7 +9,10 @@
 ![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python)
 
 ## Overview 📖
-This AWS Lambda function is designed to retrieve security alerts from a MongoDB database. It supports querying alerts by various attributes such as ID, title, severity, and more.
+
+This repository has a tool and an API for Saudi CERT alerts. Its goal is to help improve online safety knowledge in Saudi Arabia. Using AWS Lambda, this project takes Saudi CERT's alerts, organizes them, and makes them easy to get through a public API.
+
+These AWS Lambda function are designed to retrieve security alerts from a MongoDB database. It supports querying alerts by various attributes such as ID, title, severity, and more.
 
 ## Features ✨
 - Fetch alerts by ID or other specified attributes.
@@ -27,9 +30,39 @@ The Lambda function has been successfully deployed and is operational.
 ## Usage 💡
 Invoke the function via AWS SDK or an API Gateway endpoint with appropriate query parameters to retrieve alerts.
 
+## Todo
+
+1. Feature 1 ⌛
+2. Feature 2 ⌛
+3. Feature 3 ⌛
+4. Feature 4 ⌛
+
+## Testing
+
+You can test endpoints by using the following http.http file 😉
+
+```http
+###
+# Get Alerts - Fetch multiple alerts with optional query parameters
+# Basic usage without query parameters
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts
+
+# Usage with query parameters
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5
+
+# Fetching alerts based on specific attributes like title or severity
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical
+
+###
+# Get Alert - Fetch a single alert by its ID
+# Replace <ALERT_ID> with the actual ID of the alert
+GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=<ALERT_ID>
+
+# Example with a placeholder ID
+GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255
+```
 
 ## Responses
-
 
 ### Get Alert (ID) ⚠️
 

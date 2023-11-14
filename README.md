@@ -14,7 +14,6 @@
 
 ## Overview 📖
 
-
 ![Saudi CERT Logo](https://cert.gov.sa/static/img/CERT-logo-white.0bfc797b46cc.svg)
 
 This repository has a tool and an API for Saudi CERT alerts. Its goal is to help improve online safety knowledge in Saudi Arabia. Using AWS Lambda, this project takes Saudi CERT's alerts, organizes them, and makes them easy to get through a public API.
@@ -40,7 +39,7 @@ Invoke the function via AWS SDK or an API Gateway endpoint with appropriate quer
 
 ## System Diagram
 
-![System Diagram](./assets/systemDiagram.svg)
+![System Diagram](./assets/systemDiagram.png)
 
 
 ## Todo

@@ -37,6 +37,12 @@ The Lambda function has been successfully deployed and is operational.
 ## Usage 💡
 Invoke the function via AWS SDK or an API Gateway endpoint with appropriate query parameters to retrieve alerts.
 
+
+## System Diagram
+
+![System Diagram](./assets/systemDiagram.svg)
+
+
 ## Todo
 
 1. Feature 1 ⌛
@@ -70,8 +76,6 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
 ```
 
 ## Endpoints
-
-
 
 | Description | Method | URL | Notes |
 |-------------|--------|-----|---------------|

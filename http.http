@@ -1,0 +1,18 @@
+###
+# Get Alerts - Fetch multiple alerts with optional query parameters
+# Basic usage without query parameters
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts
+
+# Usage with query parameters
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5
+
+# Fetching alerts based on specific attributes like title or severity
+GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical
+
+###
+# Get Alert - Fetch a single alert by its ID
+# Replace <ALERT_ID> with the actual ID of the alert
+GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=<ALERT_ID>
+
+# Example with a placeholder ID
+GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255

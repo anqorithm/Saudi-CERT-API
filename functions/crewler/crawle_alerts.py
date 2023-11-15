@@ -32,10 +32,13 @@ def store_in_mongodb(data):
     db = client['alerts_database']
     collection = db['alerts']
 
-    if isinstance(data, list):
-        collection.insert_many(data)
-    else:
-        collection.insert_one(data)
+    for alert in data:
+        warning_number = alert['details'].get('warning_number')
+        if not collection.find_one({'details.warning_number': warning_number}):
+            collection.insert_one(alert)
+        else:
+            print(
+                f"Alert with warning number {warning_number} already exists, skipping.")
 
 
 def scrape_alert_details(alert_url):

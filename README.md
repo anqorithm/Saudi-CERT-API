@@ -57,7 +57,7 @@ Invoke the function via AWS SDK or an API Gateway endpoint with appropriate quer
 
 ## System Diagram
 
-![System Diagram](./assets/systemDiagramNew.png)
+![System Diagram](./assets/systemDiagram.png)
 
 ## Testing
 

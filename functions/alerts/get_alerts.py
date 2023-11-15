@@ -8,11 +8,13 @@ from urllib.parse import urlencode
 def lambda_handler(event, context):
     page = 1
     limit = 10
+    lang = 'en'
 
     query_params = event.get('queryStringParameters', {})
     if query_params:
         page = int(query_params.get('page', 1))
         limit = int(query_params.get('limit', 10))
+        lang = query_params.get('lang', 'en')
 
     if page < 1 or limit < 1:
         return {
@@ -22,13 +24,15 @@ def lambda_handler(event, context):
         }
 
     try:
-        alerts, total_alerts = get_alerts(page, limit)
+        alerts, total_alerts = get_alerts(
+            page, limit, lang)
         next_page_url = None
 
         total_pages = (total_alerts + limit - 1) // limit
 
         if page < total_pages:
-            next_page_params = urlencode({'page': page + 1, 'limit': limit})
+            next_page_params = urlencode(
+                {'page': page + 1, 'limit': limit, 'lang': lang})
             next_page_url = "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?" + next_page_params
 
         return {
@@ -50,14 +54,15 @@ def lambda_handler(event, context):
         }
 
 
-def get_alerts(page, limit):
+def get_alerts(page, limit, lang):
     try:
         mongodb_uri = os.getenv('MONGO_URI')
         client = MongoClient(mongodb_uri, serverSelectionTimeoutMS=5000)
         client.server_info()
 
         db = client['alerts_database']
-        collection = db['alerts']
+        collection_name = 'alerts_ar' if lang == 'ar' else 'alerts'
+        collection = db[collection_name]
 
         skip = (page - 1) * limit
 

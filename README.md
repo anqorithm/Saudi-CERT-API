@@ -2,6 +2,13 @@
 
 ![Saudi CERT](./assets/saudiCERTBackground.png)
 
+
+## Revised Goal
+
+This repository features a specialized tool and API for Saudi CERT alerts, focusing on bolstering online safety in Saudi Arabia. Utilizing AWS Lambda, it efficiently gathers and organizes Saudi CERT's alerts, providing easy access through a public API.
+
+In its pursuit, the project prioritizes offering the latest data on emerging cybersecurity threats. This approach ensures individuals and organizations are well-informed and prepared to tackle modern digital security challenges.
+
 ## Status
 
 ![deployed-aws-lamdba](https://img.shields.io/badge/Deployed-AWS--Lambda-green?style=flat)
@@ -12,6 +19,7 @@
 ## Tech Used
 ![MongoDB](https://img.shields.io/badge/MongoDB-database-green?style=for-the-badge&logo=mongodb)
 ![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python)
+
 
 ## Documentation in Postamn
 

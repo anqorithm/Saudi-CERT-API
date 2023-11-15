@@ -42,12 +42,6 @@ Invoke the function via AWS SDK or an API Gateway endpoint with appropriate quer
 ![System Diagram](./assets/systemDiagram.png)
 
 
-## Todo
-
-1. Feature 1 ⌛
-2. Feature 2 ⌛
-3. Feature 3 ⌛
-4. Feature 4 ⌛
 
 ## Testing
 
@@ -73,6 +67,23 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
 # Example with a placeholder ID
 GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255
 ```
+
+Also you can test through curl 😉
+
+```sh
+# Fetching Multiple Alerts Without Query Parameters
+$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts"
+
+# Fetching Multiple Alerts With Query Parameters
+$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5"
+
+# Fetching Alerts Based on Specific Attributes
+$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical"
+
+# Fetching a Single Alert by ID For this, you need to replace <ALERT_ID> with the actual ID of the alert.
+$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255"
+```
+
 
 ## Endpoints
 

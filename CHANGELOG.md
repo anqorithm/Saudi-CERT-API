@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/qahta0/Saudi-CERT-API/compare/v1.0.0...v1.1.0) (2023-11-15)
+
+
+### Features
+
+* add query param for choosing the language (ar & en) ([77ff766](https://github.com/qahta0/Saudi-CERT-API/commit/77ff76698bde99096dafc175e2f28e65dddf2c57))
+* add query param for choosing the language (ar & en) ([5140808](https://github.com/qahta0/Saudi-CERT-API/commit/51408083f5763e705cc142894fa628ef5e6a12a8))
+
 ## 1.0.0 (2023-11-15)
 
 

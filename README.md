@@ -134,729 +134,14 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
 
 ```json
 {
-  "alert": [
-    {
-      "_id": {
-        "$oid": "65536f5d500c2238622268dc"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "65536f5d500c2238622268dd"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "65536f5d500c2238622268de"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553703ad22f1f68fd8d12f7"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553703ad22f1f68fd8d12f8"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "655370dfc2d3ec63eb08d23f"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "655370dfc2d3ec63eb08d240"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "655371074cf6c699d2cdac0c"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "655371074cf6c699d2cdac0d"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "65537418905ba46e6f9e9aa6"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "65537418905ba46e6f9e9aa7"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "65537418905ba46e6f9e9aa8"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553c9d1708e84182e134828"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553c9d1708e84182e134829"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca02708e84182e13482f"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca02708e84182e134830"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca10708e84182e134836"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca10708e84182e134837"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca2a708e84182e13483d"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553ca2a708e84182e13483e"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553caa1708e84182e134844"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_BwTZEoM.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert119/",
-      "details": {
-        "warning_date": "9 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5887",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "9 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5887",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released a security update to address several vulnerabilities in Chrome browser for Android .",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected product, For more information, please follow the below link:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/chrome-for-android-update.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553caa1708e84182e134845"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "High",
-      "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
-      "details": {
-        "warning_date": "8 November, 2023",
-        "severity_level": "● High",
-        "warning_number": "2023-5886",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "8 November, 2023",
-        "p_6": "● High",
-        "p_7": "2023-5886",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-        "p_13": "Best practice and Recommendations:",
-        "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-        "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-        "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-      }
-    },
-    {
-      "_id": {
-        "$oid": "6553cabfca52a01a3e24bdd1"
-      },
-      "title": "Google Chrome Alert",
-      "severity": "Critical",
-      "logo": "https://cert.gov.sa/media/Chrome_qU5PcFp.png",
-      "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert1011/",
-      "details": {
-        "warning_date": "11 October, 2023",
-        "severity_level": "● Critical",
-        "warning_number": "2023-5843",
-        "target_sector": "All",
-        "p_1": "Warning Date",
-        "p_2": "Severity Level",
-        "p_3": "Warning Number",
-        "p_4": "Target Sector",
-        "p_5": "11 October, 2023",
-        "p_6": "● Critical",
-        "p_7": "2023-5843",
-        "p_8": "All",
-        "link_9": "https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_10.html",
-        "p_10": "",
-        "p_11": "Description:",
-        "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser for Windows, Mac and Linux.",
-        "p_13": "Threats:",
-        "p_14": "An attacker could exploit the vulnerabilities by doing the following:",
-        "i_1": "Use-After-Free",
-        "p_15": "Best practice and Recommendations:",
-        "p_16": "The CERT team encourages users to update the browser to 118.0.5993.70/.71 for Windows and 118.0.5993.70 for Mac and Linux, for more details, please follow the below link:",
-        "i_2": "https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_10.html"
-      }
-    }
-  ]
-}
-```
-
-### Get Alerts ⚠️
-
-`https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts`
-
-```json
-{
+ {
     "status": "success",
     "message": "Alerts retrieved successfully",
-    "total_alerts": 138,
+    "total_alerts": 62,
     "alerts": [
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268d8"
+                "$oid": "6554e21d7573c0e94fb0db2c"
             },
             "title": "Weekly Vulnerabilitie…",
             "severity": "Critical",
@@ -888,7 +173,7 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268d9"
+                "$oid": "6554e21d7573c0e94fb0db2d"
             },
             "title": "Foxit Alert",
             "severity": "High",
@@ -918,7 +203,7 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268da"
+                "$oid": "6554e21e7573c0e94fb0db2e"
             },
             "title": "NETGEAR Alert",
             "severity": "High",
@@ -946,7 +231,7 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268db"
+                "$oid": "6554e21e7573c0e94fb0db2f"
             },
             "title": "Atlassian Alert",
             "severity": "Critical",
@@ -974,7 +259,7 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268dc"
+                "$oid": "6554e21e7573c0e94fb0db30"
             },
             "title": "Google Chrome Alert",
             "severity": "High",
@@ -1004,7 +289,7 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268dd"
+                "$oid": "6554e21e7573c0e94fb0db31"
             },
             "title": "Google Chrome Alert",
             "severity": "High",
@@ -1035,121 +320,126 @@ GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?ale
         },
         {
             "_id": {
-                "$oid": "65536f5d500c2238622268de"
+                "$oid": "6554e2577573c0e94fb0db34"
             },
             "title": "Google Chrome Alert",
             "severity": "High",
-            "logo": "https://cert.gov.sa/media/Chrome_fNmvIxD.png",
-            "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert118/",
+            "logo": "https://cert.gov.sa/media/Chrome_oF8imzn.png",
+            "alert_url": "https://cert.gov.sa/en/security-warnings/google-chrome-alert-2023-11-15/",
             "details": {
-                "warning_date": "8 November, 2023",
+                "warning_date": "15 November, 2023",
                 "severity_level": "● High",
-                "warning_number": "2023-5886",
+                "warning_number": "2023-5901",
                 "target_sector": "All",
                 "p_1": "Warning Date",
                 "p_2": "Severity Level",
                 "p_3": "Warning Number",
                 "p_4": "Target Sector",
-                "p_5": "8 November, 2023",
+                "p_5": "15 November, 2023",
                 "p_6": "● High",
-                "p_7": "2023-5886",
-                "p_8": "All",
-                "link_9": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-                "p_10": "",
-                "p_11": "Description:",
-                "p_12": "Google has released security updates to address several vulnerabilities in Chrome browser and ChromeOS.",
-                "p_13": "Best practice and Recommendations:",
-                "p_14": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
-                "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html",
-                "i_2": "https://chromereleases.googleblog.com/2023/11/long-term-support-channel-update-for.html"
-            }
-        },
-        {
-            "_id": {
-                "$oid": "65536f5d500c2238622268df"
-            },
-            "title": "Veeam Alert",
-            "severity": "Critical",
-            "logo": "https://cert.gov.sa/media/non_MLqmpbv.jpg",
-            "alert_url": "https://cert.gov.sa/en/security-warnings/veeam-alert711/",
-            "details": {
-                "warning_date": "7 November, 2023",
-                "severity_level": "● Critical",
-                "warning_number": "2023-5885",
-                "target_sector": "All",
-                "p_1": "Warning Date",
-                "p_2": "Severity Level",
-                "p_3": "Warning Number",
-                "p_4": "Target Sector",
-                "p_5": "7 November, 2023",
-                "p_6": "● Critical",
-                "p_7": "2023-5885",
-                "p_8": "All",
-                "link_9": "https://www.veeam.com/kb4508",
-                "p_10": "",
-                "p_11": "Description:",
-                "p_12": "Veeam has released security updates to address multiple vulnerabilities in their products.",
-                "p_13": "Best practice and Recommendations:",
-                "p_14": "The CERT team encourages users to review Veeam security advisory and apply the necessary updates:",
-                "i_1": "https://www.veeam.com/kb4508"
-            }
-        },
-        {
-            "_id": {
-                "$oid": "65536f5d500c2238622268e0"
-            },
-            "title": "Samsung Alert",
-            "severity": "Critical",
-            "logo": "https://cert.gov.sa/media/SAMSUNG_gTLiAkk.png",
-            "alert_url": "https://cert.gov.sa/en/security-warnings/samsung-alert117/",
-            "details": {
-                "warning_date": "7 November, 2023",
-                "severity_level": "● Critical",
-                "warning_number": "2023-5884",
-                "target_sector": "All",
-                "p_1": "Warning Date",
-                "p_2": "Severity Level",
-                "p_3": "Warning Number",
-                "p_4": "Target Sector",
-                "p_5": "7 November, 2023",
-                "p_6": "● Critical",
-                "p_7": "2023-5884",
-                "p_8": "All",
-                "link_9": "https://security.samsungmobile.com/securityUpdate.smsb",
-                "p_10": "",
-                "p_11": "Description:",
-                "p_12": "Samsung has released their monthly security update for Samsung devices.",
-                "p_13": "Best practice and Recommendations:",
-                "p_14": "The CERT team encourages users to review Samsung security advisory and update the affected products:",
-                "i_1": "https://security.samsungmobile.com/securityUpdate.smsb"
-            }
-        },
-        {
-            "_id": {
-                "$oid": "65536f5d500c2238622268e1"
-            },
-            "title": "Android Alert",
-            "severity": "Critical",
-            "logo": "https://cert.gov.sa/media/non_0HZ1TDX.jpg",
-            "alert_url": "https://cert.gov.sa/en/security-warnings/android-alert-2023-11-06/",
-            "details": {
-                "warning_date": "6 November, 2023",
-                "severity_level": "● Critical",
-                "warning_number": "2023-5883",
-                "target_sector": "All",
-                "p_1": "Warning Date",
-                "p_2": "Severity Level",
-                "p_3": "Warning Number",
-                "p_4": "Target Sector",
-                "p_5": "6 November, 2023",
-                "p_6": "● Critical",
-                "p_7": "2023-5883",
+                "p_7": "2023-5901",
                 "p_8": "All",
                 "strong_9": "Description:",
-                "p_10": "Android has released their monthly security update to address multiple vulnerabilities.",
+                "p_10": "Google has released a security update to address several vulnerabilities in Chrome products.",
                 "strong_11": "Best practice and Recommendations:",
-                "p_12": "The CERT team encourages users to update their Android devices and review the security advisory for more details:",
-                "i_1": "https://source.android.com/docs/security/bulletin/2023-11-01"
+                "p_12": "The CERT team encourages users to update the affected products, For more information, please follow the below links:",
+                "i_1": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html",
+                "i_2": "https://chromereleases.googleblog.com/2023/11/stable-channel-update-for.html"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "6554e2587573c0e94fb0db35"
+            },
+            "title": "Aruba Alert",
+            "severity": "Critical",
+            "logo": "https://cert.gov.sa/media/Aruba-Networks_DLgUEUm.png",
+            "alert_url": "https://cert.gov.sa/en/security-warnings/aruba-alert-2023-11-15/",
+            "details": {
+                "warning_date": "15 November, 2023",
+                "severity_level": "● Critical",
+                "warning_number": "2023-5900",
+                "target_sector": "All",
+                "p_1": "Warning Date",
+                "p_2": "Severity Level",
+                "p_3": "Warning Number",
+                "p_4": "Target Sector",
+                "p_5": "15 November, 2023",
+                "p_6": "● Critical",
+                "p_7": "2023-5900",
+                "p_8": "All",
+                "strong_9": "Description:",
+                "p_10": "Aruba has released security updates to address several vulnerabilities in their products.",
+                "strong_11": "Best practice and Recommendations:",
+                "p_12": "The CERT team encourages users to review Aruba security advisory and update the affected products:",
+                "i_1": "https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2023-017.txt"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "6554e2587573c0e94fb0db36"
+            },
+            "title": "VMware Alert",
+            "severity": "Critical",
+            "logo": "https://cert.gov.sa/media/Vmware_4TPABBJ.jpg",
+            "alert_url": "https://cert.gov.sa/en/security-warnings/vmware-alert-2023-11-15/",
+            "details": {
+                "warning_date": "15 November, 2023",
+                "severity_level": "● Critical",
+                "warning_number": "2023-5899",
+                "target_sector": "All",
+                "p_1": "Warning Date",
+                "p_2": "Severity Level",
+                "p_3": "Warning Number",
+                "p_4": "Target Sector",
+                "p_5": "15 November, 2023",
+                "p_6": "● Critical",
+                "p_7": "2023-5899",
+                "p_8": "All",
+                "strong_9": "Description:",
+                "p_10": "VMware has released a security update to address a critical vulnerability in its product.",
+                "strong_11": "Best practice and Recommendations:",
+                "p_12": "The CERT team encourages users to review VMware security advisory and update the affected product:",
+                "i_1": "https://www.vmware.com/security/advisories/VMSA-2023-0026.html"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "6554e2587573c0e94fb0db37"
+            },
+            "title": "Adobe Alert",
+            "severity": "Critical",
+            "logo": "https://cert.gov.sa/media/Adobe_rG1RtZq.png",
+            "alert_url": "https://cert.gov.sa/en/security-warnings/adobe-alert1114/",
+            "details": {
+                "warning_date": "14 November, 2023",
+                "severity_level": "● Critical",
+                "warning_number": "2023-5898",
+                "target_sector": "All",
+                "p_1": "Warning Date",
+                "p_2": "Severity Level",
+                "p_3": "Warning Number",
+                "p_4": "Target Sector",
+                "p_5": "14 November, 2023",
+                "p_6": "● Critical",
+                "p_7": "2023-5898",
+                "p_8": "All",
+                "link_9": "https://helpx.adobe.com/security/products/coldfusion/apsb23-52.html",
+                "p_10": "",
+                "p_11": "Description:",
+                "p_12": "Adobe has released security updates to address several vulnerabilities in their products.",
+                "p_13": "Best practice and Recommendations:",
+                "p_14": "The CERT team encourages users to review Adobe security advisory and apply the necessary updates:",
+                "i_1": "·https://helpx.adobe.com/security/products/coldfusion/apsb23-52.html",
+                "i_2": "·https://helpx.adobe.com/security/products/robohelp-server/apsb23-53.html",
+                "i_3": "·https://helpx.adobe.com/security/products/acrobat/apsb23-54.html",
+                "i_4": "·https://helpx.adobe.com/security/products/photoshop/apsb23-56.html",
+                "i_5": "·https://helpx.adobe.com/security/products/framemaker/apsb23-58.html",
+                "i_6": "·https://helpx.adobe.com/security/products/incopy/apsb23-60.html",
+                "i_7": "·https://helpx.adobe.com/security/products/media-encoder/apsb23-63.html",
+                "i_8": "·https://helpx.adobe.com/security/products/audition/apsb23-64.html",
+                "i_9": "·https://helpx.adobe.com/security/products/premiere_pro/apsb23-65.html",
+                "i_10": "·https://helpx.adobe.com/security/products/after_effects/apsb23-66.html"
             }
         }
     ],

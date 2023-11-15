@@ -4,8 +4,8 @@
 
 ## Status
 
-![deployed-aws-lamdba](https://img.shields.io/badge/deployed-aws--lambda-green?style=flat)
-![python](https://img.shields.io/badge/python-v3.11-blue?style=flat)
+![deployed-aws-lamdba](https://img.shields.io/badge/Deployed-AWS--Lambda-green?style=flat)
+![python](https://img.shields.io/badge/Python-v3.11-blue?style=flat)
 ![MongoDB](https://img.shields.io/badge/MongoDB-AtlasGCP-red?style=flat)
 
 ## Tech Used

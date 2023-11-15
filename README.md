@@ -858,10 +858,6 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
 ## License 📄
 Licensed under the MIT License.
 
-## Acknowledgments 👏
-- AWS Lambda
-- MongoDB
-
 ## Contact Me
 
 Feel free to contact me, using linkedin or my email anqorithm@gmail.com

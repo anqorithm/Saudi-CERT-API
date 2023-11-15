@@ -7,10 +7,19 @@
 ![deployed-aws-lamdba](https://img.shields.io/badge/Deployed-AWS--Lambda-green?style=flat)
 ![python](https://img.shields.io/badge/Python-v3.11-blue?style=flat)
 ![MongoDB](https://img.shields.io/badge/MongoDB-AtlasGCP-red?style=flat)
+![Postman](https://img.shields.io/badge/Docs-Postman-orange?style=flat)
 
 ## Tech Used
 ![MongoDB](https://img.shields.io/badge/MongoDB-database-green?style=for-the-badge&logo=mongodb)
 ![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python)
+
+## Documentation in Postamn
+
+You can find the api documentation, and also you can test the api endpoints from here 🚀
+
+`https://www.postman.com/anqahtani/workspace/saudi-cert-api/collection/30891854-1352c7be-f75f-4677-907e-faf39d50f8cb?action=share&creator=30891854`
+
+![Postman](./assets/postman.png)
 
 ## Overview 📖
 
@@ -78,10 +87,10 @@ $ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alert
 $ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5"
 
 # Fetching Alerts Based on Specific Attributes
-$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical"
+$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?title=Weekly%20Vulnerability&severity=Critical"
 
 # Fetching a Single Alert by ID For this, you need to replace <ALERT_ID> with the actual ID of the alert.
-$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255"
+$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?id=6554e21e7573c0e94fb0db30"
 ```
 
 

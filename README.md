@@ -862,4 +862,6 @@ Licensed under the MIT License.
 - AWS Lambda
 - MongoDB
 
-## Contact Me 
+## Contact Me
+
+Feel free to contact me, using linkedin or my email anqorithm@gmail.com

@@ -860,4 +860,4 @@ Licensed under the MIT License.
 
 ## Contact Me
 
-Feel free to contact me, using linkedin or my email anqorithm@gmail.com
+Feel free to open a PR & contact me, using linkedin or my email anqorithm@gmail.com

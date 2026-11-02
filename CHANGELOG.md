@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.1.0...v1.2.0) (2026-11-02)
+
+
+### Features
+
+* add paginated JSON CSV and Excel alert exports ([#8](https://github.com/anqorithm/Saudi-CERT-API/issues/8)) ([585038e](https://github.com/anqorithm/Saudi-CERT-API/commit/585038e80051480cc01eca0fe3172ff0f96827fb))
+
 ## [1.1.0](https://github.com/qahta0/Saudi-CERT-API/compare/v1.0.0...v1.1.0) (2023-11-15)
 
 

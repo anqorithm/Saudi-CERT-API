@@ -57,6 +57,27 @@ Invoke the function via AWS SDK or an API Gateway endpoint with appropriate quer
 
 ## System Diagram
 
+### Download alerts
+
+Add `format=json`, `format=csv` or `format=xlsx` to `get_alerts` to download
+the requested page. The existing `page`, `limit` and `lang` parameters apply;
+the default is page 1 with 10 English alerts. Without `format`, the existing
+JSON response with pagination metadata is unchanged.
+
+For example: `get_alerts?format=xlsx&lang=ar&page=1&limit=100`.
+CSV and Excel flatten nested fields into columns such as
+`details.warning_number`. CSV includes a UTF-8 BOM for Arabic text in Excel.
+Spreadsheet values are exported as text to prevent formula execution.
+
+Package `functions/alerts/requirements.txt` dependencies with the alerts Lambda.
+For Excel downloads, configure the API Gateway REST API binary media types to
+include `*/*` so it decodes the Lambda's base64 response for browser downloads.
+The usual Lambda and API Gateway response size limits apply; use pagination
+for large datasets. No deployment automation is included in this repository.
+
+Run the tests with `python -m unittest discover -s tests -v` after installing
+the alerts requirements.
+
 ![System Diagram](./assets/systemDiagram1.png)
 
 ## Testing

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.2.0...v1.3.0) (2026-11-15)
+
+
+### Features
+
+* sort alerts by latest warning_date ([#10](https://github.com/anqorithm/Saudi-CERT-API/issues/10)) ([7181472](https://github.com/anqorithm/Saudi-CERT-API/commit/718147274c54a7144ac82293a9dc093cc94fa7ab))
+
 ## [1.2.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.1.0...v1.2.0) (2026-11-02)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.3.0...v1.4.0) (2026-11-15)
+
+
+### Features
+
+* **crawler:** crawl only new alerts by default ([#12](https://github.com/anqorithm/Saudi-CERT-API/issues/12)) ([8cc814d](https://github.com/anqorithm/Saudi-CERT-API/commit/8cc814dae4614482cb3f0f885ae7fd9751a7ef0a))
+
 ## [1.3.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.2.0...v1.3.0) (2026-11-15)
 
 

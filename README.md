@@ -50,6 +50,13 @@ The Lambda function has been successfully deployed and is operational.
 - Ensure MongoDB is set up with your alerts data.
 - Deploy the Lambda function with the necessary environment variables (e.g., `MONGO_URI`).
 - Configure Lambda to interact with your MongoDB instance.
+- Package `functions/crewler/requirements.txt` with the crawler Lambdas.
+
+### Crawling only new alerts
+Invoke a crawler with an empty event (`{}`), for example from a schedule, and it
+crawls from page 1 and stops at the first page with no new alerts, so only
+alerts newer than the last stored one are fetched. `max_pages` (default 50)
+caps one run. Pass `from_page` and `to_page` to crawl a fixed range as before.
 
 ## Usage 💡
 Invoke the function via AWS SDK or an API Gateway endpoint with appropriate query parameters to retrieve alerts.

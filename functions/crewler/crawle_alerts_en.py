@@ -4,9 +4,13 @@ import requests
 from pymongo import MongoClient
 from bs4 import BeautifulSoup
 
+MAX_PAGES = 50
+
 
 def lambda_handler(event, context):
     try:
+        if "to_page" not in event:
+            return crawl_new_alerts(int(event.get("max_pages", MAX_PAGES)))
         from_page = int(event.get("from_page", 1))
         to_page = int(event.get("to_page", 1)) + 1
 
@@ -26,19 +30,38 @@ def lambda_handler(event, context):
         }
 
 
+def crawl_new_alerts(max_pages):
+    # Pages are newest first, so the first page with no new alerts is the threshold already stored.
+    page, inserted, total = 0, 1, 0
+    while inserted and page < max_pages:
+        page += 1
+        data = scrape_page(page)
+        if isinstance(data, str):
+            raise RuntimeError(data)
+        inserted = store_in_mongodb(data)
+        total += inserted
+    return {
+        'statusCode': 200,
+        'body': json.dumps(f'Stored {total} new alerts from pages 1 to {page}')
+    }
+
+
 def store_in_mongodb(data):
     mongodb_uri = os.getenv('MONGO_URI')
     client = MongoClient(mongodb_uri)
     db = client['alerts_database']
     collection = db['alerts']
 
+    inserted = 0
     for alert in data:
         warning_number = alert['details'].get('warning_number')
         if not collection.find_one({'details.warning_number': warning_number}):
             collection.insert_one(alert)
+            inserted += 1
         else:
             print(
                 f"Alert with warning number {warning_number} already exists, skipping.")
+    return inserted
 
 
 def scrape_alert_details(alert_url):

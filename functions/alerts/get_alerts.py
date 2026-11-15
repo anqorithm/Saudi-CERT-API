@@ -135,7 +135,7 @@ def export_alerts(alerts, export_format):
 
 def warning_date_sort_pipeline(lang, skip, limit):
     # warning_date is stored as text like "12 November, 2023", so build a sortable yyyymmdd number.
-    # shortcut: unknown month spellings sort last, store a real date at crawl time if that shows up.
+    # shortcut: an unknown month spelling sorts to the start of its year, store a real date at crawl time if that shows up.
     parts = {'$split': [{'$ifNull': ['$details.warning_date', '']}, ' ']}
     number = lambda index: {'$convert': {'input': {'$trim': {'input': {'$arrayElemAt': [parts, index]}, 'chars': ','}},
                                          'to': 'int', 'onError': 0, 'onNull': 0}}

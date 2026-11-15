@@ -7,6 +7,13 @@ from pymongo import MongoClient
 from bson import json_util
 from urllib.parse import urlencode
 
+MONTHS = {
+    'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+           'August', 'September', 'October', 'November', 'December'],
+    'ar': ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو',
+           'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+}
+
 
 def lambda_handler(event, context):
     page = 1
@@ -15,6 +22,13 @@ def lambda_handler(event, context):
 
     query_params = event.get('queryStringParameters') or {}
     export_format = query_params.get('format')
+    sort = query_params.get('sort')
+    if sort not in (None, 'warning_date'):
+        return {
+            'statusCode': 400,
+            'headers': {'Content-Type': 'application/json'},
+            'body': json.dumps({'status': 'error', 'message': 'Sort must be warning_date'})
+        }
     if export_format not in (None, 'json', 'csv', 'xlsx'):
         return {
             'statusCode': 400,
@@ -38,7 +52,7 @@ def lambda_handler(event, context):
 
     try:
         alerts, total_alerts = get_alerts(
-            page, limit, lang)
+            page, limit, lang, sort)
         if export_format:
             return export_alerts(alerts, export_format)
         next_page_url = None
@@ -47,7 +61,7 @@ def lambda_handler(event, context):
 
         if page < total_pages:
             next_page_params = urlencode(
-                {'page': page + 1, 'limit': limit, 'lang': lang})
+                {'page': page + 1, 'limit': limit, 'lang': lang, **({'sort': sort} if sort else {})})
             next_page_url = "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?" + next_page_params
 
         return {
@@ -119,7 +133,24 @@ def export_alerts(alerts, export_format):
             'body': base64.b64encode(output.getvalue()).decode('ascii')}
 
 
-def get_alerts(page, limit, lang):
+def warning_date_sort_pipeline(lang, skip, limit):
+    # warning_date is stored as text like "12 November, 2023", so build a sortable yyyymmdd number.
+    # shortcut: an unknown month spelling sorts to the start of its year, store a real date at crawl time if that shows up.
+    parts = {'$split': [{'$ifNull': ['$details.warning_date', '']}, ' ']}
+    number = lambda index: {'$convert': {'input': {'$trim': {'input': {'$arrayElemAt': [parts, index]}, 'chars': ','}},
+                                         'to': 'int', 'onError': 0, 'onNull': 0}}
+    month = {'$indexOfArray': [MONTHS[lang], {'$trim': {'input': {'$arrayElemAt': [parts, 1]}, 'chars': ','}}]}
+    return [
+        {'$addFields': {'_warning_date_key': {'$add': [
+            {'$multiply': [number(2), 10000]}, {'$multiply': [{'$add': [month, 1]}, 100]}, number(0)]}}},
+        {'$sort': {'_warning_date_key': -1, '_id': -1}},
+        {'$skip': skip},
+        {'$limit': limit},
+        {'$unset': '_warning_date_key'},
+    ]
+
+
+def get_alerts(page, limit, lang, sort=None):
     try:
         mongodb_uri = os.getenv('MONGO_URI')
         client = MongoClient(mongodb_uri, serverSelectionTimeoutMS=5000)
@@ -133,7 +164,10 @@ def get_alerts(page, limit, lang):
 
         total_alerts = collection.count_documents({})
 
-        alerts = list(collection.find({}).skip(skip).limit(limit))
+        if sort == 'warning_date':
+            alerts = list(collection.aggregate(warning_date_sort_pipeline('ar' if lang == 'ar' else 'en', skip, limit)))
+        else:
+            alerts = list(collection.find({}).skip(skip).limit(limit))
         return alerts, total_alerts
     except Exception as e:
         raise Exception(f"Database connection failed: {str(e)}")

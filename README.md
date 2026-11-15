@@ -57,6 +57,12 @@ Invoke the function via AWS SDK or an API Gateway endpoint with appropriate quer
 
 ## System Diagram
 
+### Sort by latest warning date
+
+Add `sort=warning_date` to `get_alerts` to get the newest alerts first, for example
+`get_alerts?sort=warning_date&lang=ar&page=1&limit=5`. It works with `page`, `limit`,
+`lang` and `format`. Without `sort`, the order is unchanged.
+
 ### Download alerts
 
 Add `format=json`, `format=csv` or `format=xlsx` to `get_alerts` to download

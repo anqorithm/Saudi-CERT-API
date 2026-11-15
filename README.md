@@ -56,7 +56,9 @@ The Lambda function has been successfully deployed and is operational.
 Invoke a crawler with an empty event (`{}`), for example from a schedule, and it
 crawls from page 1 and stops at the first page with no new alerts, so only
 alerts newer than the last stored one are fetched. `max_pages` (default 50)
-caps one run. Pass `from_page` and `to_page` to crawl a fixed range as before.
+caps one run; if new alerts continue past it, the run stores nothing and returns
+an error, so backfill with `from_page` and `to_page` (the old fixed-range mode).
+Alerts are stored oldest first after the scan, so a failed run can simply be retried.
 
 ## Usage 💡
 Invoke the function via AWS SDK or an API Gateway endpoint with appropriate query parameters to retrieve alerts.

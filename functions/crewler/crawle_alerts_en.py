@@ -31,37 +31,45 @@ def lambda_handler(event, context):
 
 
 def crawl_new_alerts(max_pages):
-    # Pages are newest first, so the first page with no new alerts is the threshold already stored.
-    page, inserted, total = 0, 1, 0
-    while inserted and page < max_pages:
-        page += 1
+    # Pages are newest first: scan until a page has nothing new, then store oldest first,
+    # so a failed run leaves the newest alerts unstored and the next run picks them up.
+    collection = get_collection()
+    pages = []
+    for page in range(1, max_pages + 1):
         data = scrape_page(page)
         if isinstance(data, str):
             raise RuntimeError(data)
-        inserted = store_in_mongodb(data)
-        total += inserted
+        new = [a for a in data if not collection.find_one(
+            {'details.warning_number': a['details'].get('warning_number')})]
+        if not new:
+            break
+        pages.append(new)
+    else:
+        raise RuntimeError(
+            f'Still finding new alerts after {max_pages} pages; raise max_pages or use from_page/to_page')
+    alerts = [a for new in reversed(pages) for a in reversed(new)]
+    store_in_mongodb(alerts)
     return {
         'statusCode': 200,
-        'body': json.dumps(f'Stored {total} new alerts from pages 1 to {page}')
+        'body': json.dumps(f'Stored {len(alerts)} new alerts from pages 1 to {len(pages)}')
     }
 
 
-def store_in_mongodb(data):
-    mongodb_uri = os.getenv('MONGO_URI')
-    client = MongoClient(mongodb_uri)
-    db = client['alerts_database']
-    collection = db['alerts']
+def get_collection():
+    client = MongoClient(os.getenv('MONGO_URI'))
+    return client['alerts_database']['alerts']
 
-    inserted = 0
+
+def store_in_mongodb(data):
+    collection = get_collection()
+
     for alert in data:
         warning_number = alert['details'].get('warning_number')
         if not collection.find_one({'details.warning_number': warning_number}):
             collection.insert_one(alert)
-            inserted += 1
         else:
             print(
                 f"Alert with warning number {warning_number} already exists, skipping.")
-    return inserted
 
 
 def scrape_alert_details(alert_url):

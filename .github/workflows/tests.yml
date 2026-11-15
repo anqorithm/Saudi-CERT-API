@@ -13,5 +13,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install -r functions/alerts/requirements.txt
+      - run: python -m pip install -r functions/alerts/requirements.txt -r functions/crewler/requirements.txt
       - run: python -m unittest discover -s tests -v

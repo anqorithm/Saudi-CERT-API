@@ -33,7 +33,7 @@ class ExportTests(unittest.TestCase):
 
     def test_json_exports_requested_page_and_language(self):
         response = self.invoke({'format': 'json', 'lang': 'ar', 'page': '2', 'limit': '5'})
-        self.fetch.assert_called_once_with(2, 5, 'ar')
+        self.fetch.assert_called_once_with(2, 5, 'ar', None)
         body = json.loads(response['body'])
         self.assertEqual(body[0]['_id']['$oid'], str(self.alerts[0]['_id']))
         self.assertEqual(body[0]['title'], 'تنبيه')
@@ -74,3 +74,20 @@ class ExportTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class SortTests(unittest.TestCase):
+    def setUp(self):
+        self.database = patch.object(get_alerts, 'get_alerts', return_value=([], 21))
+        self.fetch = self.database.start()
+        self.addCleanup(self.database.stop)
+
+    def test_sort_is_passed_through_and_kept_in_next_page(self):
+        response = get_alerts.lambda_handler({'queryStringParameters': {'sort': 'warning_date'}}, None)
+        self.fetch.assert_called_once_with(1, 10, 'en', 'warning_date')
+        self.assertIn('sort=warning_date', json.loads(response['body'])['next_page'])
+
+    def test_unknown_sort_is_rejected(self):
+        response = get_alerts.lambda_handler({'queryStringParameters': {'sort': 'title'}}, None)
+        self.assertEqual(response['statusCode'], 400)
+        self.fetch.assert_not_called()

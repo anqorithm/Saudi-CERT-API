@@ -62,7 +62,10 @@ def lambda_handler(event, context):
         if page < total_pages:
             next_page_params = urlencode(
                 {'page': page + 1, 'limit': limit, 'lang': lang, **({'sort': sort} if sort else {})})
-            next_page_url = "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?" + next_page_params
+            # Build the link from the API Gateway request so it follows wherever the API is deployed.
+            ctx = event.get('requestContext') or {}
+            base = f"https://{ctx['domainName']}{ctx.get('path', '')}" if ctx.get('domainName') else ''
+            next_page_url = base + '?' + next_page_params
 
         return {
             'statusCode': 200,

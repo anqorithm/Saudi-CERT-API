@@ -11,7 +11,7 @@ In its pursuit, the project prioritizes offering the latest data on emerging cyb
 
 ## Status
 
-![deployed-aws-lamdba](https://img.shields.io/badge/Deployed-AWS--Lambda-green?style=flat)
+![aws-lambda](https://img.shields.io/badge/Runs%20on-AWS--Lambda-orange?style=flat)
 ![python](https://img.shields.io/badge/Python-v3.11-blue?style=flat)
 ![MongoDB](https://img.shields.io/badge/MongoDB-AtlasGCP-red?style=flat)
 ![Postman](https://img.shields.io/badge/Docs-Postman-orange?style=flat)
@@ -43,8 +43,10 @@ These AWS Lambda function are designed to retrieve security alerts from a MongoD
 - Integration with MongoDB.
 - Supported Arabic & English languages
 
-## Deployment Status ✅
-The Lambda function has been successfully deployed and is operational.
+## Deployment Status
+The public API is offline: its old API Gateway URLs no longer resolve. Deploy the
+functions to your own AWS account (see Setup) and use your API Gateway URLs in
+place of `<GET_ALERTS_API>` and `<GET_ALERT_API>` below.
 
 ## Setup 🔧
 - Ensure MongoDB is set up with your alerts data.
@@ -103,37 +105,37 @@ You can test endpoints by using the following http.http file 😉
 ###
 # Get Alerts - Fetch multiple alerts with optional query parameters
 # Basic usage without query parameters
-GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts
+GET https://<GET_ALERTS_API>/default/get_alerts
 
 # Usage with query parameters
-GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5
+GET https://<GET_ALERTS_API>/default/get_alerts?page=1&limit=5
 
 # Fetching alerts based on specific attributes like title or severity
-GET https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical
+GET https://<GET_ALERTS_API>/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical
 
 ###
 # Get Alert - Fetch a single alert by its ID
 # Replace <ALERT_ID> with the actual ID of the alert
-GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=<ALERT_ID>
+GET https://<GET_ALERT_API>/default/get_alert?alert_id=<ALERT_ID>
 
 # Example with a placeholder ID
-GET https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255
+GET https://<GET_ALERT_API>/default/get_alert?alert_id=5f50c31e8eabf80018e4b255
 ```
 
 Also you can test through curl 😉
 
 ```sh
 # Fetching Multiple Alerts Without Query Parameters
-$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts"
+$ curl "https://<GET_ALERTS_API>/default/get_alerts"
 
 # Fetching Multiple Alerts With Query Parameters
-$ curl "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5"
+$ curl "https://<GET_ALERTS_API>/default/get_alerts?page=1&limit=5"
 
 # Fetching Alerts Based on Specific Attributes
-$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?title=Weekly%20Vulnerability&severity=Critical"
+$ curl "https://<GET_ALERT_API>/default/get_alert?title=Weekly%20Vulnerability&severity=Critical"
 
 # Fetching a Single Alert by ID For this, you need to replace <ALERT_ID> with the actual ID of the alert.
-$ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?id=6554e21e7573c0e94fb0db30"
+$ curl "https://<GET_ALERT_API>/default/get_alert?id=6554e21e7573c0e94fb0db30"
 ```
 
 
@@ -141,18 +143,18 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
 
 | Description | Method | URL | Notes |
 |-------------|--------|-----|---------------|
-| **Get Alerts** <br> Fetch multiple alerts | `GET` | `https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts` | Basic usage without query parameters |
-| **Get Alerts with Parameters** <br> Fetch alerts with pagination | `GET` | `https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=5` | Fetches alerts with page 1 and limit 5 |
-| **Get Alerts by Attributes** <br> Fetch alerts based on title or severity | `GET` | `https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical` | Fetches alerts with specific title and severity |
-| **Get Alert by ID** <br> Fetch a single alert | `GET` | `https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=<ALERT_ID>` | Replace `<ALERT_ID>` with the actual ID |
-| **Example Get Alert** <br> Example with a placeholder ID | `GET` | `https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?alert_id=5f50c31e8eabf80018e4b255` | Example using a specific alert ID |
+| **Get Alerts** <br> Fetch multiple alerts | `GET` | `https://<GET_ALERTS_API>/default/get_alerts` | Basic usage without query parameters |
+| **Get Alerts with Parameters** <br> Fetch alerts with pagination | `GET` | `https://<GET_ALERTS_API>/default/get_alerts?page=1&limit=5` | Fetches alerts with page 1 and limit 5 |
+| **Get Alerts by Attributes** <br> Fetch alerts based on title or severity | `GET` | `https://<GET_ALERTS_API>/default/get_alerts?title=Weekly%20Vulnerability&severity=Critical` | Fetches alerts with specific title and severity |
+| **Get Alert by ID** <br> Fetch a single alert | `GET` | `https://<GET_ALERT_API>/default/get_alert?alert_id=<ALERT_ID>` | Replace `<ALERT_ID>` with the actual ID |
+| **Example Get Alert** <br> Example with a placeholder ID | `GET` | `https://<GET_ALERT_API>/default/get_alert?alert_id=5f50c31e8eabf80018e4b255` | Example using a specific alert ID |
 
 
 ## Responses
 
 ### Get Alert (ID) ⚠️
 
-`https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?id=65536f5d500c2238622268d8`
+`https://<GET_ALERT_API>/default/get_alert?id=65536f5d500c2238622268d8`
 
 ```json
 {
@@ -191,7 +193,7 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
 }
 ```
 
-`https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?id=6555366754572009bcd38905&lang=ar`
+`https://<GET_ALERT_API>/default/get_alert?id=6555366754572009bcd38905&lang=ar`
 
 ```json
 {
@@ -239,7 +241,7 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
 
 ### Get Alert (Query Parameters) ⚠️
 
-`https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert?title=Google%20Chrome%20Alert`
+`https://<GET_ALERT_API>/default/get_alert?title=Google%20Chrome%20Alert`
 
 ```json
 {
@@ -552,13 +554,13 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
             }
         }
     ],
-    "next_page": "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=2&limit=10"
+    "next_page": "https://<GET_ALERTS_API>/default/get_alerts?page=2&limit=10"
 }
 ```
 
 ## Supported Arabic Language 
 
-`https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=1&limit=10&lang=ar`
+`https://<GET_ALERTS_API>/default/get_alerts?page=1&limit=10&lang=ar`
 
 ```json
 {
@@ -887,7 +889,7 @@ $ curl "https://sas5g5ymqb.execute-api.us-east-1.amazonaws.com/default/get_alert
             }
         }
     ],
-    "next_page": "https://1tozt5y6hl.execute-api.us-east-1.amazonaws.com/default/get_alerts?page=2&limit=10&lang=ar"
+    "next_page": "https://<GET_ALERTS_API>/default/get_alerts?page=2&limit=10&lang=ar"
 }
 ```
 

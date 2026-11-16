@@ -31,6 +31,12 @@ class ExportTests(unittest.TestCase):
         self.assertIn('page=2', body['next_page'])
         self.assertNotIn('Content-Disposition', response['headers'])
 
+    def test_next_page_uses_the_request_host(self):
+        event = {'queryStringParameters': None,
+                 'requestContext': {'domainName': 'api.example.com', 'path': '/default/get_alerts'}}
+        body = json.loads(get_alerts.lambda_handler(event, None)['body'])
+        self.assertTrue(body['next_page'].startswith('https://api.example.com/default/get_alerts?page=2'))
+
     def test_json_exports_requested_page_and_language(self):
         response = self.invoke({'format': 'json', 'lang': 'ar', 'page': '2', 'limit': '5'})
         self.fetch.assert_called_once_with(2, 5, 'ar', None)

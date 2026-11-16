@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.4.0...v1.4.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* stop pointing at the deleted public API ([#14](https://github.com/anqorithm/Saudi-CERT-API/issues/14)) ([b7df3d5](https://github.com/anqorithm/Saudi-CERT-API/commit/b7df3d55a9f4f96ff94a5757fc74172b3a357917))
+
 ## [1.4.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.3.0...v1.4.0) (2026-11-15)
 
 

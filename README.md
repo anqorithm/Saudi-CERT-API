@@ -62,6 +62,12 @@ caps one run; if new alerts continue past it, the run stores nothing and returns
 an error, so backfill with `from_page` and `to_page` (the old fixed-range mode).
 Alerts are stored oldest first after the scan, so a failed run can simply be retried.
 
+### Requiring a JWT token
+Set `JWT_SECRET` on the `get_alert` and `get_alerts` Lambdas to turn on
+authentication. Each request then needs `Authorization: Bearer <token>`, where
+the token is an HS256 JWT signed with that secret (`exp` is checked when present).
+Anything else gets `401 Unauthorized`. Without `JWT_SECRET` the API stays public.
+
 ## Usage 💡
 Invoke the function via AWS SDK or an API Gateway endpoint with appropriate query parameters to retrieve alerts.
 

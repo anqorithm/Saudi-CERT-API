@@ -2,9 +2,16 @@ import os
 import json
 from pymongo import MongoClient, errors
 from bson import json_util, ObjectId
+try:
+    from .auth import unauthorized
+except ImportError:  # Lambda loads the handler as a top-level module.
+    from auth import unauthorized
 
 
 def lambda_handler(event, context):
+    denied = unauthorized(event)
+    if denied:
+        return denied
     try:
         query_params = event.get('queryStringParameters', {})
         lang = query_params.get('lang', 'en')

@@ -6,6 +6,10 @@ from io import BytesIO, StringIO
 from pymongo import MongoClient
 from bson import json_util
 from urllib.parse import urlencode
+try:
+    from .auth import unauthorized
+except ImportError:  # Lambda loads the handler as a top-level module.
+    from auth import unauthorized
 
 MONTHS = {
     'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -16,6 +20,9 @@ MONTHS = {
 
 
 def lambda_handler(event, context):
+    denied = unauthorized(event)
+    if denied:
+        return denied
     page = 1
     limit = 10
     lang = 'en'

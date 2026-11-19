@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.4.1...v1.5.0) (2026-11-19)
+
+
+### Features
+
+* **auth:** require a JWT bearer token when JWT_SECRET is set ([#16](https://github.com/anqorithm/Saudi-CERT-API/issues/16)) ([0310a26](https://github.com/anqorithm/Saudi-CERT-API/commit/0310a269ebcefe505e681e84d12d93083780f5a0)), closes [#7](https://github.com/anqorithm/Saudi-CERT-API/issues/7)
+
 ## [1.4.1](https://github.com/anqorithm/Saudi-CERT-API/compare/v1.4.0...v1.4.1) (2026-11-16)
 
 
